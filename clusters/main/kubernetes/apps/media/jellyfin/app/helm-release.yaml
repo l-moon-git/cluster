@@ -37,24 +37,24 @@ spec:
       anime:
         enabled: true
         type: nfs
-        server: 192.168.7.2
+        server: ${NFS_IP}
         path: "/mnt/tank/wisteria/anime"
         mountPath: "/media/anime"
       movies:
         enabled: true
         type: nfs
-        server: 192.168.7.2
+        server: ${NFS_IP}
         path: "/mnt/tank/wisteria/movies"
         mountPath: "/media/movies"
       music:
         enabled: true
         type: nfs
-        server: 192.168.7.2
+        server: ${NFS_IP}
         path: "/mnt/tank/wisteria/music"
         mountPath: "/media/music"
       tvshows:
         enabled: true
         type: nfs
-        server: 192.168.7.2
+        server: ${NFS_IP}
         path: "/mnt/tank/wisteria/tvshows"
         mountPath: "/media/tvshows"
