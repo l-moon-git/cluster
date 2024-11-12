@@ -1,0 +1,259 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-anime-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-anime-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/anime"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-anime-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-anime-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-tvshows-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-tvshows-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/tvshows"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-tvshows-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-tvshows-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-movies-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-movies-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/movies"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-movies-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-movies-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-music-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-music-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/music"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-music-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-music-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: media-manga-nfs-pv
+  namespace: media
+spec:
+  storageClassName: media-manga-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/manga"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-manga-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: media-manga-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: downloads-nfs-pv
+  namespace: media
+spec:
+  storageClassName: downloads-nfs
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.7.2
+    path: "/mnt/tank/wisteria/downloads"
+  mountOptions:
+    - nfsvers=4
+    - tcp
+    - intr
+    - hard
+    - noatime
+    - nodiratime
+    - nolock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: downloads-nfs-pvc
+  namespace: media
+spec:
+  storageClassName: downloads-nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
