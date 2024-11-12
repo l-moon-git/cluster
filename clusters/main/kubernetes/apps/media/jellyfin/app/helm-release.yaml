@@ -36,17 +36,25 @@ spec:
     persistence:
       anime:
         enabled: true
-        existingClaim: media-anime-nfs-pvc
+        type: nfs
+        server: ${NFS_IP}
+        path: "/mnt/tank/wisteria/anime"
         mountPath: "/media/anime"
       movies:
         enabled: true
-        existingClaim: media-movies-nfs-pvc
+        type: nfs
+        server: ${NFS_IP}
+        path: "/mnt/tank/wisteria/movies"
         mountPath: "/media/movies"
       music:
         enabled: true
-        existingClaim: media-music-nfs-pvc
+        type: nfs
+        server: ${NFS_IP}
+        path: "/mnt/tank/wisteria/music"
         mountPath: "/media/music"
       tvshows:
         enabled: true
-        existingClaim: media-tvshows-nfs-pvc
+        type: nfs
+        server: ${NFS_IP}
+        path: "/mnt/tank/wisteria/tvshows"
         mountPath: "/media/tvshows"
