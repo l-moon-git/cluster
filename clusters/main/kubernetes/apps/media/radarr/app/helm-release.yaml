@@ -44,7 +44,7 @@ spec:
       movies:
         enabled: true
         existingClaim: media-movies-nfs-pvc
-        mountPath: "/media/movies"
+        mountPath: "/media"
       downloads:
         enabled: true
         existingClaim: downloads-nfs-pvc

@@ -45,7 +45,7 @@ spec:
       music:
         enabled: true
         existingClaim: media-music-nfs-pvc
-        mountPath: "/media/music"
+        mountPath: "/media"
       downloads:
         enabled: true
         existingClaim: downloads-nfs-pvc
